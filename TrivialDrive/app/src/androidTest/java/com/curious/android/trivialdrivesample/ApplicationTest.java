@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Google Inc. All rights reserved.
+ * Copyright 2012 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,18 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.trivialdrivesample;
+package com.curious.android.trivialdrivesample;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import android.app.Application;
+import android.test.ApplicationTestCase;
 
 /**
- * To work on unit tests, switch the Test Artifact in the Build Variants view.
+ * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
  */
-public class ExampleUnitTest {
-    @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+public class ApplicationTest extends ApplicationTestCase<Application> {
+
+    public ApplicationTest() {
+        super(Application.class);
     }
 }

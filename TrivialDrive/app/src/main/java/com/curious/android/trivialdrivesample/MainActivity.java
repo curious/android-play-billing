@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.trivialdrivesample;
+package com.curious.android.trivialdrivesample;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,13 +30,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.android.trivialdrivesample.util.IabBroadcastReceiver;
-import com.example.android.trivialdrivesample.util.IabBroadcastReceiver.IabBroadcastListener;
-import com.example.android.trivialdrivesample.util.IabHelper;
-import com.example.android.trivialdrivesample.util.IabHelper.IabAsyncInProgressException;
-import com.example.android.trivialdrivesample.util.IabResult;
-import com.example.android.trivialdrivesample.util.Inventory;
-import com.example.android.trivialdrivesample.util.Purchase;
+import com.curious.android.trivialdrivesample.util.IabBroadcastReceiver;
+import com.curious.android.trivialdrivesample.util.IabBroadcastReceiver.IabBroadcastListener;
+import com.curious.android.trivialdrivesample.util.IabHelper;
+import com.curious.android.trivialdrivesample.util.IabHelper.IabAsyncInProgressException;
+import com.curious.android.trivialdrivesample.util.IabResult;
+import com.curious.android.trivialdrivesample.util.Inventory;
+import com.curious.android.trivialdrivesample.util.Purchase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -161,7 +161,7 @@ public class MainActivity extends Activity implements IabBroadcastListener,
          * want to make it easy for an attacker to replace the public key with one
          * of their own and then fake messages from the server.
          */
-        String base64EncodedPublicKey = "CONSTRUCT_YOUR_KEY_AND_PLACE_IT_HERE";
+        String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAju0Ni1vRkV/kqRr/5iA7IYqrEo7F1jukYZ+q45VAVhcnQmRGzj0j1WSreBvu9gMGDuRCRR+3Yoi5uXICbGfZU7sBaQSOb91s9FZLDelRUdHipBtIrrrKO2cix0naP4gaH+BBmJuB3EOsv1xbl5bnF5ryCrkjyk/s4x0FHL/tB84pgExSECyWMR12uBgK6UccVa6IC75dGSq6nkmpvXes5MLmwnP6Dwz/KF1aKlm8Mn0S0FxN5G6E5LWvoABTYaBSY6FWb6LiilpxTAubcuddZElVXkkE2273Xj2HlX0p/sg7uFHXwDFUDI9bHLCGD29HRbuwWRlNELibZAN1u74w2wIDAQAB";
 
         // Some sanity checks to see if the developer (that's you!) really followed the
         // instructions to run this sample (don't put these checks on your app!)
