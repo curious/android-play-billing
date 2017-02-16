@@ -222,6 +222,29 @@ public class MainActivity extends Activity implements IabBroadcastListener,
         public void onQueryInventoryFinished(IabResult result, Inventory inventory) {
             Log.d(TAG, "Query inventory finished.");
 
+            List<Purchase> purchases = inventory.getAllPurchases();
+            Log.i(TAG, "Listing " + purchases.size() + " purchases...");
+            if (purchases.size() > 0) {
+                for (Purchase purchase : purchases) {
+                    Log.i(TAG, "----------------------------------------");
+                    Log.i(TAG, "itemType = " + purchase.getItemType());
+                    Log.i(TAG, "orderId = " + purchase.getOrderId());
+                    Log.i(TAG, "packageName = " + purchase.getPackageName());
+                    Log.i(TAG, "sku = " + purchase.getSku());
+                    Log.i(TAG, "purchaseTime" + purchase.getPurchaseTime());
+                    Log.i(TAG, "purchaseState = " + purchase.getPurchaseState());
+                    Log.i(TAG, "developerPayload = " + purchase.getDeveloperPayload());
+                    Log.i(TAG, "token = " + purchase.getToken());
+                    Log.i(TAG, "originalJson" + purchase.getOriginalJson());
+                    Log.i(TAG, "signature = " + purchase.getSignature());
+                    Log.i(TAG, "isAutoRenewing = " + purchase.isAutoRenewing());
+                }
+                Log.i(TAG, "----------------------------------------");
+            } else {
+                Log.i(TAG, "*** No purchases found ***");
+            }
+            Log.i(TAG, "...done");
+
             // Have we been disposed of in the meantime? If so, quit.
             if (mHelper == null) return;
 
